@@ -6,6 +6,6 @@ $(document).ready(function(){
   var bottom = new Array("#eebbcb", "#cbb994", "#eaf4fc", "#c099a0", "#c7b370", "#d9333f", "#ee827c", "#aa7e4c", "#aa4c8f", "#cd5e3c", "#e09e87");
   var cannon = "#a2041b",
   var ballpath = new Array();
-  var ballhide = new Array((160,72)); 
+  var ballhide = new Array((160,72));
+	
 }
-
