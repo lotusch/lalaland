@@ -1,0 +1,300 @@
+    1  ssh -t git@s1.bodait.com
+    2  ssh -T git@s1.bodait.com
+    3  git clone git@s1.bodait.com:bodait/survey.git
+    4  git config --global user.name "ch"
+    5  git config --global user.email allsgoo@sina.com
+    6  git clone git@s1.bodait.com:bodait/survey.git
+    7  ssh-keygen -t rsa
+    8  cat ~/.ssh/id_rsa.pub
+    9  ssh s1.bodait.com
+   10  cd ~/.ssh
+   11  ls
+   12  ssh-keygen -t rsa -C "chihui@bodait.com"
+   13  clip < ~/.ssh/id_rsa.pub
+   14  ssh -T s1.bodait.com
+   15  ssh -T git@s1.bodait.com:bodait/survey.git
+   16  ssh -T git@s1.bodait.com
+   17  ssh -T git@s1.bodait.com
+   18  ssh clone git@s1.bodait.com:bodait/surveydemo.git
+   19  ssh -T git@s1.bodait.com
+   20  git remote -v
+   21  git remote show origin
+   22  git fetch origin master:tmp
+   23  git diff tmp
+   24  git merge tmp
+   25  ssh -T git@s1.bodait.com
+   26  git fetch origin master:tmp
+   27  git diff tmp
+   28  git merge tmp
+   29  ssh -T git@s1.bodait.com
+   30  git fetch origin master:temp
+   31  git diff temp
+   32  git merge temp
+   33  git fetch origin master:tmp
+   34  git diff tmp
+   35  git merge tmp
+   36  ssh -T git@s1.bodait.com
+   37  git fetch origin master:tmp
+   38  git diff tmp
+   39  git merge tmp
+   40  ssh -T git@s1.bodait.com
+   41  git fetch origin master:tmp
+   42  git merge tmp
+   43  ssh -T git@s1.bodait.com
+   44  git fetch origin master:tmp
+   45  git merge tmp
+   46  ssh -T git@s1.bodait.com
+   47  git fetch origin master:tmp
+   48  git merge tmp
+   49  ssh -T git@s1.bodait.com
+   50  git fetch origin master:tmp
+   51  git merge tmp
+   52  git fetch origin master:tmp
+   53  git merge tmp
+   54  exit;
+   55  ssh -T git@s1.bodait.com
+   56  git fetch origin master:tmp
+   57  git merge tmp
+   58  git clone https://github.com/TYPO3/TYPO3.CMS
+   59  mkdir wechat
+   60  cd wechat
+   61  ls -l
+   62  git init
+   63  pwd
+   64  ls -la
+   65  ll .git
+   66  git config user.name lucy_pro
+   67  git config user.email lucy_pro@sina.com
+   68  cat .git/config
+   69  git config --global user.name lucy_glb
+   70  git config --global user.email lucy_glb@sina.com
+   71  cd  ~
+   72  pwd
+   73  ls -la|less
+   74  cat .gitconfig
+   75  exit;
+   76  ssh -T git@s1.bodait.com
+   77  git status
+   78  git status
+   79  vim good.html
+   80  vim good.html
+   81  git add good.html
+   82  git status
+   83  git rm --canched good.html
+   84  git rm --cached good.html
+   85  git status
+   86  git add good.html
+   87  git status
+   88  git commit good.html
+   89  cat good.html
+   90  git status
+   91  vim index.php
+   92  git status
+   93  vim good.html
+   94  git status
+   95  git add good.html
+   96  git status
+   97  git commit -m "second commit just add php code ,modify good.html" good.html
+   98  git status
+   99  git add index.php
+  100  git commit -m "first php file add" index.php
+  101  git log
+  102  vim index.html
+  103  cat index.html
+  104  git add index.html
+  105  git status
+  106  git commit -m "third file add" index.html
+  107  git log
+  108  git log --pretty=oneline
+  109  git log --oneline
+  110  git reflog
+  111  exit;
+  112  git reflo
+  113  git reflog
+  114  vim good.html
+  115  git reflog
+  116  git commit -a good.html
+  117  git reflog
+  118  git add good.html
+  119  git commit -m "add one string about dddd test" good.html
+  120  git reflog
+  121  cat good.html
+  122  git reset --hard 24a23f7
+  123  cat good.html
+  124  cat index.php
+  125  git reflog
+  126  vim index.php
+  127  cat index.php
+  128  cat second.php
+  129  git reset --hard 9920878
+  130  git reset --hard^
+  131  git reset --hard HEAD^
+  132  exit;
+  133  git log
+  134  git log --oneline
+  135   git status
+  136  git add second.php
+  137  git commit -m "add second.php" second.php
+  138  git status
+  139  git branch -v
+  140  vim second.php
+  141  git diff second.php
+  142  git stauts
+  143  git status
+  144  git branch -v
+  145  exit
+  146  ssh -T git@s1.bodait.com
+  147  git remote -v
+  148  git push origin master
+  149  git fetch origin master:tmp
+  150  git merge tmp
+  151  vim App/Home/View/Talk/detail.html
+  152  git diff App
+  153  git diff App/Home/View/Talk/detail.html
+  154  vim GW32 /d/wamp/www/git1/survey (master)
+  155  $ git diff App/Home/View/Talk/detail.html
+  156  git diff HEAD  App/Home/View/Talk/detail.html
+  157  git log --oneline
+  158  exit
+  159  cd ..
+  160  mkdir huashan
+  161  cd huashan
+  162  git init
+  163  vim hs.html
+  164  git add hs.html
+  165  git commit -m "test github" hs.html
+  166  vim hs.html
+  167  chat hs.html
+  168  git log
+  169  git status
+  170  git add hs.html
+  171  git commit -m "add div ,modify first" hs.html
+  172  git remote -v
+  173  git remote add origin https://github.com/lotusch/lalaland.git
+  174  git remote -v
+  175  git push origin master
+  176  vim hs.html
+  177  cat hs.html
+  178  vim hs.html
+  179  cat hs.html
+  180  vim hs.html
+  181  cat hs.html
+  182  git commit -m "add canvas .first modify" hs.html
+  183  git push origin master
+  184  git push origin master
+  185  exit
+  186  mk home
+  187  mkdir Home
+  188  cd Home/
+  189  vim index.php
+  190  cat Home/index.php
+  191  cat index.php
+  192  cd ..
+  193  cat Home/index.php
+  194  vim hs.js
+  195  cat hs.js
+  196  cat hs.html
+  197  vim hs.js
+  198  git add -a
+  199  git add --all
+  200  git log --oneline
+  201  git status
+  202  git rm --cached hs.js.bak
+  203  rm hs.js.bak
+  204  git status
+  205  git commit -m "add one js file,a php file to test" 
+  206  git push lalaland master
+  207  git remote -v
+  208  git push lalaland master
+  209  git push origin master
+  210  git push origin master
+  211  exit
+  212  git status
+  213  git log --oneline
+  214  git remote -v
+  215  vim hs.html
+  216  cat hs.html
+  217  head -5 hs.html
+  218  vim hs.html
+  219  vim hs.js
+  220  vim hs.js
+  221  cat hs.js
+  222  git status
+  223  git commit -a
+  224  git push origin master
+  225  git push origin master
+  226  ll 
+  227  ls -la
+  228  exit
+  229  who
+  230  who am i
+  231  useradd lucy
+  232  cat hs.js
+  233  man cat
+  234  ls 
+  235  ls -l
+  236   exit
+  237  date
+  238  cal
+  239  date
+  240  date +%F
+  241  date +%F' '%H:%M:%S
+  242  git status
+  243  pwd
+  244  ls 
+  245  ls -l
+  246  ls -a
+  247  cd home/
+  248  ls -l
+  249  ls -d index.php
+  250  ls -d a.php
+  251  cd ..
+  252  ls -al
+  253  touch a.html
+  254  ls -l
+  255  vim a.html
+  256  cat a.html
+  257  mkdir a
+  258  cd a/
+  259  pwd
+  260  cd ..
+  261  rmdir
+  262  rmdir a
+  263  ls -l
+  264  pwd
+  265  mkdir a
+  266  cd a
+  267  touch 1.html
+  268  cd..
+  269  cd ..
+  270  ls -l
+  271  ls -R a
+  272  ls -l
+  273  mv a b
+  274  ls -l
+  275  mv a.html  ab.html
+  276  ls -l
+  277  touch a.html
+  278  ls -l
+  279  mv a.html b/
+  280  ls -l
+  281  cd b/
+  282  ls -l
+  283  cd ..
+  284  cat -b hs.html
+  285  cat -A hs.html
+  286  cat -v hs.html
+  287  tac -b hs.html
+  288  more hs.html
+  289  tail -5 hs.html
+  290  history
+  291  ls -l
+  292  touch h.txt
+  293  history > h.txt
+total 11
+-rw-r--r-- 1 ch 197121   81 7月  31 14:23 ab.html
+drwxr-xr-x 1 ch 197121    0 7月  31 14:39 b/
+-rw-r--r-- 1 ch 197121 6930 7月  31 14:57 h.txt
+drwxr-xr-x 1 ch 197121    0 7月  24 14:00 Home/
+-rw-r--r-- 1 ch 197121  201 7月  25 14:18 hs.html
+-rw-r--r-- 1 ch 197121  493 7月  25 16:15 hs.js
