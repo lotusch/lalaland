@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf8"><title></title>
+	</head>
+	<body>
+		<div id="wrap">
+		  <ul class="list">
+	            <li>theme1<a href="javascript:;">delete</a></li>
+		    
+	            <li>theme2<a href="javascript:;">delete</a></li>
+
+	            <li>theme3<a href="javascript:;">delete</a></li>
+		    
+	            <li>theme4<a href="javascript:;">delete</a></li>
+		    
+	            <li>theme5<a href="javascript:;">delete</a></li>
+
+	            <li>theme6<a href="javascript:;">delete</a></li>
+		  </ul>
+
+		</div>
+	</body>
+	<script type="text/javascript">
+         window.onload = function(){
+	   var nodes = document.querySelectorAll(".list > li >a");
+           for(var i=0; i<nodes.length;i++){
+	     nodes[i].onclick = function(){
+	       //console.log(i);
+	       this.parentNode.style.display = "none";
+	     }
+	   }
+	 }
+	</script>
+</html>
