@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>bubbles</title>
+		<style>
+		*{margin:0;padding:0;}
+		#first{position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;}
+		</style>
+	</head>
+	<body>
+		<canvas width="500" height="500" id="first"></canvas>
+	</body>
+        <script type="text/javascript">
+	       window.onload = function(){
+		      var canv = document.getElementById("first");
+			  var ctx = canv.getContext("2d");
+			  var arr = [];
+
+	      //画气泡
+            setInterval(function(){
+	       		ctx.clearRect(0,0,canv.width,canv.height);
+				console.log(arr);
+				for(var i=0;i<arr.length;i++){
+					if(arr[i].alp < 0){
+					   arr.splice(i,1);
+					}
+					arr[i].r++;
+					arr[i].alp -= 0.01;
+		    
+		        }
+
+				for(var i=0;i<arr.length;i++){
+					ctx.save();
+					ctx.beginPath();
+					ctx.arc(arr[i].x,arr[i].y,arr[i].r,0,2*Math.PI,true);
+					ctx.fillStyle = "rgba("+arr[i].red+","+arr[i].green+","+arr[i].blue+","+arr[i].alp+")";
+					//ctx.closePath();
+					ctx.fill();
+				}
+	       },1000/21)
+	    	
+             //arr 中注入气泡信息
+	       setInterval(function(){
+	      	var x= Math.random()*canv.width;
+			var y= Math.random()*canv.height;
+			var r= 10;
+			var red = Math.round(Math.random()*255);
+			var green = Math.round(Math.random()*255);
+			var blue = Math.round(Math.random()*255);
+			var alp = 1;
+
+			arr.push({
+				x:x,
+				y:y,
+				r:r,
+				red:red,
+				green:green,
+				blue:blue,
+				alp:alp
+			})
+		  },500)
+	    }
+	</script>
+</html>
