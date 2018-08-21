@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>bubbles 曲线上升</title>
+<style>
+*{margin:0;padding:0;}
+body{background:#a0dbef;}
+#fo{background:white;position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;}
+</style>
+</head>
+<body>
+<canvas id="fo" width="150" height="350"></canvas>
+</body>
+<script type="text/javascript">
+	window.onload = function(){
+		var cv = document.getElementById("fo");
+		var cx = cv.getContext("2d");
+		var arr = [];
+
+		setInterval(function(){
+			cx.clearRect(0,0,cv.width,cv.height);//clear context
+			//carton
+			for(var i=0;i<arr.length;i++){
+				arr[i].radin +=7;
+				arr[i].x = arr[i].pX + Math.sin(arr[i].radin*Math.PI/180)*arr[i].step*2;
+				arr[i].y = arr[i].pY -(arr[i].radin*Math.PI / 180)*arr[i].step/2;
+				console.log(arr);
+				if(arr[i].y <=50){
+					arr.splice(i,1);
+				}
+			}
+
+
+			//draw
+			for(var i=0;i<arr.length;i++){
+				cx.save();
+				cx.beginPath();
+				cx.fillStyle = "rgba("+arr[i].red+","+arr[i].green+","+arr[i].blue+","+arr[i].alp+")";
+				cx.arc(arr[i].x,arr[i].y,arr[i].r,0,2*Math.PI,true);
+				cx.fill();
+			}
+		
+		},1000/80)
+
+		//输入数据
+		setInterval(function(){
+			var r = Math.random()*6+2;
+			var x = Math.random()*cv.width;
+			var y = cv.height - r;
+			var red = Math.round(Math.random()*255);
+			var green = Math.round(Math.random()*255);
+			var blue = Math.round(Math.random()*255);
+			var alp = 1;
+
+			var radin = 0;
+			var pX = x;
+			var pY = y;
+			var step = Math.random()*20+10;
+			arr.push({
+				x:x,
+				y:y,
+				r:r,
+				red:red,
+				green:green,
+				blue:blue,
+				alp:alp,
+				radin:radin,
+				pX:pX,
+				pY:pY,
+				step:step
+			})
+		
+		},1000/5)
+	
+	}
+</script>
+</html>
