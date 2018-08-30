@@ -14,6 +14,7 @@ img{display:block;}
 /*common css*/
 .clearfix{*zoom:1;}
 .clearfix:after{content:"";display:block;clear:both;}
+.commonTitle{color:#009ee0;font-size:80px;line-height:0.9;font-weight:bold;letter-spacing:-5px;}
 
 /*head style*/
 #head{backgound:white!important;position:relative;z-index:2;width:100%;}
@@ -26,15 +27,50 @@ img{display:block;}
 #head .headMain > .nav >.list> li .leave{color:#a0dbef;}
 .arrow{width:21px;height:21px;background:url(img/arrow_w.png);position:absolute;left:50%;bottom:-14px;transition:1s left;z-index:2;}
 
-#content{background:gray;position:relative;width:100%;}
-#content .list{position:absolute;left:0;top:0;width:100%;overflow:hidden;transition:1s top;}
-#content .list > li{position:relative;background-position:50% 50%!important;}
-#content .list > li > div{width:1100px;height:520px;background:green;position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;}
-#content .list > .home{background:url(img/bg1.jpg) no-repeat;}
-#content .list > .course{background:url(img/bg2.jpg) no-repeat;}
-#content .list > .works{background:url(img/bg3.jpg) no-repeat;}
-#content .list > .about{background:url(img/bg1.jpg) no-repeat;}
-#content .list > .team{background:url(img/bg2.jpg) no-repeat;}
+#content{background:gray;position:relative;width:100%;overflow:hidden;}
+#content > .list{position:absolute;left:0;top:0;width:100%;overflow:hidden;transition:1s top;}
+#content > .list > li{position:relative;background-position:50% 50%!important;}
+#content > .list > li > section{width:1100px;height:520px;background:rgba(248,248,255,0.5);position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;}
+#content > .list > .home{background:url(img/bg1.jpg) no-repeat;}
+#content > .list > .course{background:url(img/bg2.jpg) no-repeat;}
+
+
+#content > .list > .works{background:url(img/bg3.jpg) no-repeat;}
+#content > .list > .works .works1{margin:50px 0px 100px 50px;}
+#content > .list > .works .works2{margin-left:50px;}
+#content > .list > .works .works2 > .item{float:left;width:220px;height:133px;margin:0 1px;position:relative;overflow:hidden;}
+#content > .list > .works .works2 > .item:last-child{width:332px;}
+#content > .list > .works .works2 > .item img{width:220px;height:133px;transition:1s transform;}
+#content > .list > .works .works2 > .item >.last-img{width:332px;height:133px}
+#content > .list > .works .works2 > .item .mask{position:absolute;left:0;right:0;top:0;bottom:0;box-sizing:border-box;padding:10px;background:#000000;opacity:0;color:white;transition:1s opacity;}
+#content > .list > .works .works2 > .item .mask .icon{width:32px;height:34px;margin:0 auto;margin-top:10px;background:url(img/fd1.png) no-repeat;transition:0.7s background-position;}
+#content > .list > .works .works2 > .item .mask .icon:hover{background-position:0 -33px;}
+#content > .list > .works .works2 > .item:hover .mask{opacity:0.8;}
+#content > .list > .works .works2 > .item:hover img{transform:rotate(30deg) scale(1.5)}
+#content > .list > .works .works3{width:167px;height:191px;background:url(img/Titian.jpg) no-repeat;position:absolute;left:900px;top:170px;animation:works3Move 6s linear infinite;}
+
+@keyframes works3Move{
+	0%{
+		transform:translateX(0px) rotateY(0deg);
+	}
+	49%{
+		transform:translateX(-490px) rotateY(0deg);
+	}
+	50%{
+		transform:translateX(-500px) rotateY(180deg);
+	}
+	100%{
+	    transform:translateX(0px) rotateY(180deg);
+	}
+}
+
+
+
+
+
+
+#content > .list > .about{background:url(img/bg1.jpg) no-repeat;}
+#content > .list > .team{background:url(img/bg2.jpg) no-repeat;}
 
 </style>
 </head>
@@ -84,11 +120,50 @@ img{display:block;}
 		</header>
 		<section id="content">
 		  <ul class="list">
-			<li class="home"><div>home</div></li>
-			<li class="course"><div>course</div></li>
-			<li class="works"><div>works</div></li>
-			<li class="about"><div>about</div></li>
-			<li class="team"><div>team</div></li>
+			<li class="home"><section>home</section></li>
+			<li class="course"><section>course</section></li>
+			<li class="works"><!--titian (c.1488–1576), Italian painter;-->
+				<section>
+					<header class="works1 commonTitle">
+						<span>Titian</span><br />
+						<span>c.1488–1576</span><br />
+						<span>Italian painter</span><br />
+					</header>
+					<div class="works2">
+						<div class="item">
+							<img src="img/w11.jpg"/>
+							<div class="mask">
+								<span>提香画作</span>
+								<div class="icon"></div>
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/w22.jpg"/>
+							<div class="mask">
+								<span>提香画作</span>
+								<div class="icon"></div>
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/w33.jpg"/>
+							<div class="mask">
+								<span>提香画作</span>
+								<div class="icon"></div>
+							</div>
+						</div>
+						<div class="item">
+							<img class="last-img" src="img/w44.jpg"/>
+							<div class="mask">
+								<span>提香画作</span>
+								<div class="icon"></div>
+							</div>
+						</div>
+					</div>
+					<div class="works3"></div>
+				</section>
+			</li>
+			<li class="about"><section>about</section></li>
+			<li class="team"><section>team</section></li>
 		  </ul>
 		</section>
 	</section>
@@ -107,7 +182,51 @@ img{display:block;}
         var content = document.querySelector("#content");
         var cliNodes = document.querySelectorAll("#content .list > li");
 		var clist = document.querySelector("#content .list ");
+		/*同步content li 的索引*/
+		var now = 0;
+        var timer = 0;
 		/*content 区域*/
+		//滚轮事件
+		if(content.addEventListener){
+			content.addEventListener("DOMMouseScroll",function(ev){
+				ev = ev||event;
+				clearTimeout(timer);
+				timer = setTimeout(function(){
+					fn(ev);
+				},200)
+			});
+		}
+		content.onmousewheel = function(ev){
+			ev = ev||event;
+			clearTimeout(timer);
+			timer = setTimeout(function(){
+				fn(ev);
+			},200)
+		};
+		function fn(ev){
+			ev = ev||event;
+			var dir = "";
+			if(ev.wheelDelta){
+				dir = ev.wheelDelta>0?"up":"down";
+			}else if(ev.detail){
+				dir = ev.detail<0?"up":"down";
+			}
+			switch(dir){
+				case "up":
+				if(now>0){
+					now--;
+					arrowMove(now);
+				}
+				break;
+				case "down":
+				if(now<cliNodes.length-1){
+					now++;
+					arrowMove(now);
+				}
+				break;
+			}
+		}
+
         contentbind();
 
 		/*缩放窗口*/
@@ -131,11 +250,12 @@ img{display:block;}
 				liNodes[i].index = i;
 				liNodes[i].onclick = function(){
 					arrowMove(this.index);
-					console.log(this.index);
+					now = this.index;
 				}
 		    }
 		}
-
+        
+		arrowMove(2);
 		function arrowMove(index){
 			for(var i=0;i<upNodes.length;i++){
 				upNodes[i].style.width = "";
