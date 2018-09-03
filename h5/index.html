@@ -15,6 +15,7 @@ img{display:block;}
 .clearfix{*zoom:1;}
 .clearfix:after{content:"";display:block;clear:both;}
 .commonTitle{color:#009ee0;font-size:80px;line-height:0.9;font-weight:bold;letter-spacing:-5px;}
+.commonText{color:white;line-height:1.5;font-size:15px;}
 
 /*head style*/
 #head{backgound:white!important;position:relative;z-index:2;width:100%;}
@@ -31,10 +32,9 @@ img{display:block;}
 #content > .list{position:absolute;left:0;top:0;width:100%;overflow:hidden;transition:1s top;}
 #content > .list > li{position:relative;background-position:50% 50%!important;}
 #content > .list > li > section{width:1100px;height:520px;background:rgba(248,248,255,0.5);position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;}
-#content > .list > .home{background:url(img/bg1.jpg) no-repeat;}
-#content > .list > .course{background:url(img/bg2.jpg) no-repeat;}
 
 
+/*Third*/
 #content > .list > .works{background:url(img/bg3.jpg) no-repeat;}
 #content > .list > .works .works1{margin:50px 0px 100px 50px;}
 #content > .list > .works .works2{margin-left:50px;}
@@ -63,14 +63,79 @@ img{display:block;}
 	    transform:translateX(0px) rotateY(180deg);
 	}
 }
-
-
-
-
-
-
 #content > .list > .about{background:url(img/bg1.jpg) no-repeat;}
 #content > .list > .team{background:url(img/bg2.jpg) no-repeat;}
+
+/*second*/
+#content > .list > .course{background:url(img/bg1.jpg) no-repeat;}
+#content > .list > .course .course1{margin:50px;}
+#content > .list > .course .course2{margin-left:50px;width:400px;}
+#content > .list > .course .course3{width:480px;position:absolute;right:50px;top:70px;}
+#content > .list > .course .course3 .item{float:left;width:120px;height:132px;position:relative;
+                                          perspective:500px;transform-style:preserve-3d;
+										}
+#content > .list > .course .course3 .item .face,#content > .list > .course .course3 .item .backFace{
+position:absolute;left:0;top:0;width:100%;height:100%;box-sizing:border-box;padding:10px;transition:1s transform;}
+#content > .list > .course .course3 .item .face{background-position:50% 50%;}
+#content > .list > .course .course3 .item:nth-of-type(1) .face{background:url(img/vg1.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(2) .face{background:url(img/vg2.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(3) .face{background:url(img/vg3.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(4) .face{background:url(img/vg4.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(5) .face{background:url(img/vg5.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(6) .face{background:url(img/vg6.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(7) .face{background:url(img/vg1.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(8) .face{background:url(img/vg2.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(9) .face{background:url(img/vg1.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(10) .face{background:url(img/vg2.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(11) .face{background:url(img/vg1.png) no-repeat;}
+#content > .list > .course .course3 .item:nth-of-type(12) .face{background:url(img/vg2.png) no-repeat;}
+
+#content > .list > .course .course3 .item .backFace{transform:rotateY(180deg);backface-visibility:hidden;background:#a0dbef;color:white;}
+
+#content > .list > .course .course3 .item:hover .backFace{transform:rotateY(360deg);}
+#content > .list > .course .course3 .item:hover .face{transform:rotateY(180deg);}
+
+/*First*/
+#content > .list > .home{background:url(img/bg2.jpg) no-repeat;}
+#content > .list > .home .home1{width:100%;height:100%;perspective:1000px;transform-style:preserve-3d;}
+#content > .list > .home .home1 > li{position:absolute;left:0;right:0;top:0;bottom:0;visibility:hidden;}
+#content > .list > .home .home1 > li:nth-child(1){background:#dc6c5f;}
+#content > .list > .home .home1 > li:nth-child(2){background:#95dc84;}
+#content > .list > .home .home1 > li:nth-child(3){background:#64b9d2;}
+#content > .list > .home .home1 > li:nth-child(4){background:#000000;}
+#content > .list > .home .home1 > li > div{color:white;text-align:center;margin-top:200px;}
+#content > .list > .home .home1 > li.active{visibility:visible;}
+
+#content > .list > .home .home2{position:absolute;left:0;right:0;bottom:0;text-align:center;}
+#content > .list > .home .home2 > li{border-radius:50%;width:20px;height:20px;display:inline-block;background:rgba(255,255,255,0.5);box-shadow:0 0 4px green;cursor:pointer;}
+#content > .list > .home .home2 > li.active{background:white;cursor:default;}
+
+/*从左往右leftHide rightShow*/
+#content > .list > .home .home1 > li.leftHide{visibility:hidden;animation:1s leftHide 1 linear;}
+#content > .list > .home .home1 > li.rightShow{visibility:visible;animation:1s rightShow 1 linear;}
+	@keyframes leftHide{
+		0%{visibility:visible;}
+		50%{transform:translateX(-40%) rotateY(30deg) scale(0.8);}
+		100%{transform:translateZ(-200px);}
+	}
+	@keyframes rightShow{
+		0%{visibility:hidden;transform:translateZ(-200px);}
+		50%{transform:translateX(40%) rotateY(-30deg) scale(0.8);}
+		100%{}
+	}
+/*从右往左leftShow rightHide*/
+#content > .list > .home .home1 > li.leftShow{visibility:visible;animation:2s leftShow 1 linear;}
+#content > .list > .home .home1 > li.rightHide{visibility:hidden;animation:2s rightHide 1 linear;}
+	@keyframes leftShow{
+		0%{visibility:hidden;transform:translateZ(-200px);}
+		50%{transform:translateX(-40%) rotateY(30deg) scale(0.8);}
+		100%{}
+	}
+	@keyframes rightHide{
+		0%{visibility:visible;}
+		50%{transform:translateX(40%) rotateY(-30deg) scale(0.8);}
+		100%{transform:translateZ(-200px);}
+	}
 
 </style>
 </head>
@@ -79,7 +144,7 @@ img{display:block;}
 		<header id="head">
 			<div class="headMain">
 				<h1 class="logo">
-					<a href="javascript:;"><img src="img/p1.jpg"></a>
+					<a href="javascript:;"><img src="img/p2.png"></a>
 				</h1>
 				<nav class="nav">
 				   <ul class="list clearfix">
@@ -120,14 +185,99 @@ img{display:block;}
 		</header>
 		<section id="content">
 		  <ul class="list">
-			<li class="home"><section>home</section></li>
-			<li class="course"><section>course</section></li>
+			<li class="home">
+				<section>
+					<ul class="home1">
+						<li class="commonTitle active"><div class="item">one</div></li>
+						<li class="commonTitle"><div class="item">two</div></li>
+						<li class="commonTitle"><div class="item">three</div></li>
+						<li class="commonTitle"><div class="item">four</div></li>
+					</ul>
+					<ul class="home2">
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</section>
+			</li>
+			<li class="course">
+				<section>
+					<header class="course1 commonTitle">
+						<span>VincentVanGogh</span> <br/>
+						<span>1853–1890</span> <br/>
+						<span>Painter</span> <br/>
+					</header>
+					<div class="course2 commonText">
+						<p>
+							Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. 
+							<br />
+							In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. 
+						</p>
+					</div>
+					<div class="course3">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+						<div class="item">
+							<div class="face"></div>
+							<div class="backFace">VanGogh 画作 starry night</div>
+						</div>
+						<div class="item">
+							<div class="face"></div>
+							<div class="backFace">VanGogh 画作 Country road in Provence by night</div>
+						</div>
+						<div class="item">
+							<div class="face"></div>
+							<div class="backFace">VanGogh 画作 Sunflowers Metropolitan Museum of Art</div>
+						</div>
+						<div class="item">
+							<div class="face"></div>
+							<div class="backFace">VanGogh 画作</div>
+						</div>
+						<div class="item">
+							<div class="face"></div>
+							<div class="backFace">VanGogh 画作</div>
+						</div>
+						<div class="item">
+							<div class="face"></div>
+							<div class="backFace"></div>
+						</div>
+						<div class="item">
+							<div class="face"></div>
+							<div class="backFace"></div>
+						</div>
+						<div class="item">
+							<div class="face"></div>
+							<div class="backFace"></div>
+						</div>
+						<div class="item">
+							<div class="face"></div>
+							<div class="backFace"></div>
+						</div>
+						<div class="item">
+							<div class="face"></div>
+							<div class="backFace"></div>
+						</div>
+						<div class="item">
+							<div class="face"></div>
+							<div class="backFace"></div>
+						</div>
+						<div class="item">
+							<div class="face"></div>
+							<div class="backFace"></div>
+						</div>
+					</div>
+				</section>
+			</li>
 			<li class="works"><!--titian (c.1488–1576), Italian painter;-->
 				<section>
 					<header class="works1 commonTitle">
 						<span>Titian</span><br />
 						<span>c.1488–1576</span><br />
-						<span>Italian painter</span><br />
+						<span>Italian Painter</span><br />
 					</header>
 					<div class="works2">
 						<div class="item">
@@ -182,10 +332,59 @@ img{display:block;}
         var content = document.querySelector("#content");
         var cliNodes = document.querySelectorAll("#content .list > li");
 		var clist = document.querySelector("#content .list ");
+		var home2LiNodes = document.querySelectorAll("#content > .list > .home .home2 > li ");
+		var home1LiNodes = document.querySelectorAll("#content > .list > .home .home1 > li ");
 		/*同步content li 的索引*/
 		var now = 0;
         var timer = 0;
+
 		/*content 区域*/
+		/*first screen 3D 效果*/
+		home3d();
+		var oldIndex = 0;
+        function home3d(){
+			for (var i=0;i<home2LiNodes.length ;i++ )
+			{   home2LiNodes[i].index = i;
+				home2LiNodes[i].onclick = function(){
+					for (var j=0;j<home2LiNodes.length ;j++ )
+			        {		
+						home2LiNodes[j].classList.remove("active");
+					}
+					this.classList.add("active");
+
+					//left to right
+					if(oldIndex<this.index){
+						home1LiNodes[this.index].classList.remove("leftShow");
+						home1LiNodes[this.index].classList.remove("leftHide");
+						home1LiNodes[this.index].classList.remove("rightHide");
+						home1LiNodes[this.index].classList.add("rightShow");
+
+						home1LiNodes[oldIndex].classList.remove("rightShow");
+						home1LiNodes[oldIndex].classList.remove("rightHide");
+						home1LiNodes[oldIndex].classList.remove("leftShow");
+						home1LiNodes[oldIndex].classList.add("leftHide");
+					}
+
+					//right to left
+					if(oldIndex>this.index){
+						home1LiNodes[this.index].classList.remove("rightShow");
+						home1LiNodes[this.index].classList.remove("rightHide");
+						home1LiNodes[this.index].classList.remove("leftHide");
+						home1LiNodes[this.index].classList.add("leftShow");
+
+						home1LiNodes[oldIndex].classList.remove("rightShow");
+						home1LiNodes[oldIndex].classList.remove("leftShow");
+						home1LiNodes[oldIndex].classList.remove("leftHide");
+						home1LiNodes[oldIndex].classList.add("rightHide");
+					}
+					oldIndex = this.index;
+				}
+			}
+		}
+
+
+
+
 		//滚轮事件
 		if(content.addEventListener){
 			content.addEventListener("DOMMouseScroll",function(ev){
@@ -255,7 +454,7 @@ img{display:block;}
 		    }
 		}
         
-		arrowMove(2);
+		//arrowMove(1);
 		function arrowMove(index){
 			for(var i=0;i<upNodes.length;i++){
 				upNodes[i].style.width = "";
@@ -268,7 +467,7 @@ img{display:block;}
 //			for(var i=0;i<cliNodes.length;i++){
 //				cliNodes[i].style.top = "";
 //			}
-//            cliNodes[index].style.top = -index*(document.documentElement.clientHeight - head.offsetHeight)+"px";
+//          cliNodes[index].style.top = -index*(document.documentElement.clientHeight - head.offsetHeight)+"px";
 //            
 		}
 		
