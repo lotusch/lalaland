@@ -11,7 +11,7 @@ img{display:block;}
 .commonTitle{color:#009ee0;font-size:80px;line-height:0.9;font-weight:bold;letter-spacing:-5px;}
 .commonText{color:white;line-height:1.5;font-size:15px;}
 
-/*head style*/
+/*head*/
 #head{backgound:white!important;position:relative;z-index:2;width:100%;}
 #head .headMain{width:1100px;height:80px;margin:0 auto;position:relative;}
 #head .headMain > .logo{float:left;margin-top:30px;}
@@ -136,9 +136,12 @@ position:absolute;left:0;top:0;width:100%;height:100%;box-sizing:border-box;padd
 #content > .list > .about .about3 > .item{width:260px;height:200px;border:5px solid rgba(255,255,255,0.5);border-radius:8px;position:absolute;z-index:2;overflow:hidden;}
 #content > .list > .about .about3 > .item:nth-child(1){left:750px;top:50px;}
 #content > .list > .about .about3 > .item:nth-child(2){left:600px;top:290px;}
-#content > .list > .about .about3 > .item > span,#content > .list > .about .about3 > .item > ul{position:absolute;top:0;right:0;bottom:0;left:0;}
-#content > .list > .about .about3 > .item:nth-child(1) > span{background:url(img/mn1.jpg) no-repeat;transform:scale(1.5);transition:1s transform;}
-#content > .list > .about .about3 > .item:nth-child(2) > span{background:url(img/mn4.jpg) no-repeat;transform:scale(1.5);transition:1s transform;}
+#content > .list > .about .about3 > .item > span,
+#content > .list > .about .about3 > .item > ul{position:absolute;top:0;right:0;bottom:0;left:0;}
+#content > .list > .about .about3 > .item:nth-child(1) > span
+{background:url(img/mn1.jpg) no-repeat;transform:scale(1.5);transition:1s transform;}
+#content > .list > .about .about3 > .item:nth-child(2) > span
+{background:url(img/mn4.jpg) no-repeat;transform:scale(1.5);transition:1s transform;}
 #content > .list > .about .about3 > .item:hover span{transform:scale(1);}
 #content > .list > .about .about3 > .item > ul > li{float:left;position:relative;overflow:hidden;}
 #content > .list > .about .about3 > .item > ul > li > img{position:absolute;transition:1s top,1s left;}
@@ -160,4 +163,8 @@ position:absolute;left:0;top:0;width:100%;height:100%;box-sizing:border-box;padd
 #content > .dott > li{width:15px;height:15px;border:2px solid #fff036;
                         margin-top:10px;border-radius:50%;z-index:99}
 #content > .dott > li.active{background:#95dc84;}
+
+/*出入场动画*/
+#content > .list > .team .team1,#content > .list > .team .team2,#content > .list > .about .about3 > .item:nth-child(1),#content > .list > .about .about3 > .item:nth-child(2)
+{transition:2s transform;}
 

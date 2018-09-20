@@ -13,7 +13,10 @@ window.onload = function(){
 		var home2LiNodes = document.querySelectorAll("#content > .list > .home .home2 > li ");
 		var home1LiNodes = document.querySelectorAll("#content > .list > .home .home1 > li ");
 		var home1 = document.querySelector("#content > .list > .home .home1");
-		var aboutUls = document.querySelector("#content > .list > .about .about3 > .item > ul");
+
+		//选择器一定要弄清单个是querySelector 两个以上是querySelectorAll
+		var aboutUls = document.querySelectorAll("#content > .list > .about .about3 > .item > ul");
+
 		var dottLis = document.querySelectorAll("#content > .dott > li");
 		var team3 = document.querySelector("#content > .list > .team .team3");
 		var team3Lis = document.querySelectorAll("#content > .list > .team .team3 li");
@@ -22,6 +25,65 @@ window.onload = function(){
         var timer = 0;
 
 		/*content 区域*/
+		//出入场动画
+		var anArr = [{
+						inAn:function(){
+							
+						},
+						outAn:function(){
+							
+						}
+		            },
+					{
+						inAn:function(){
+							
+						},
+						outAn:function(){
+							
+						}
+					},
+					{
+					    inAn:function(){
+							
+						},
+						outAn:function(){
+							
+						}
+					},
+					{
+						inAn:function(){
+							var dire1 = document.querySelector("#content > .list > .about .about3 > .item:nth-child(1)"); 
+							var dire2 = document.querySelector("#content > .list > .about .about3 > .item:nth-child(2)");
+							dire1.style.transform = "rotate(0turn)";
+							dire2.style.transform = "rotate(0turn)";
+						},
+						outAn:function(){
+							var dire1 = document.querySelector("#content > .list > .about .about3 > .item:nth-child(1)"); 
+							var dire2 = document.querySelector("#content > .list > .about .about3 > .item:nth-child(2)");
+							dire1.style.transform = "rotate(0.2turn)";
+							dire2.style.transform = "rotate(-0.2turn)";
+						}
+					},
+					{
+						inAn:function(){
+							var team1 = document.querySelector("#content > .list > .team .team1");
+							var team2 = document.querySelector("#content > .list > .team .team2");
+
+							team1.style.transform = "translateX(0px)";
+							team2.style.transform = "translateX(0px)";
+						},
+						outAn:function(){
+							var team1 = document.querySelector("#content > .list > .team .team1");
+							var team2 = document.querySelector("#content > .list > .team .team2");
+							
+							team1.style.transform = "translateX(-200px)";
+							team2.style.transform = "translateX(200px)";
+						}
+					}];
+		anArr[3].outAn();
+		setTimeout(function(){
+			anArr[3].inAn();
+		},2000);
 
 		//bubbles
 		bubbles();
@@ -97,7 +159,6 @@ window.onload = function(){
 
 					//输入数据
 					time2 = setInterval(function(){
-						console.log(cav.width);
 						var r = Math.random()*6+2;
 						var x = Math.random()*cav.width;
 						var y = cav.height - r;
@@ -124,13 +185,10 @@ window.onload = function(){
 							step:step
 						})
 					
-					},100/2)
+					},100/2);
 				}
 			}
-			
 		}
-
-
 
 		/*fouth screen Pictures Boom 效果*/
 		picBoom();
@@ -183,14 +241,8 @@ window.onload = function(){
 					imgNodes[3].style.top = -h+"px";
 				
 				}
-				
 			}
-		
 		}
-
-
-
-
 
 		/*first screen 3D 效果*/
 		var oldIndex = 0;
@@ -361,7 +413,7 @@ window.onload = function(){
 		    }
 		}
         
-		arrowMove(4);
+		arrowMove(0);
 		function arrowMove(index){
 			for(var i=0;i<upNodes.length;i++){
 				upNodes[i].style.width = "";
