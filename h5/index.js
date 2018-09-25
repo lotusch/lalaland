@@ -20,11 +20,48 @@ window.onload = function(){
 		var dottLis = document.querySelectorAll("#content > .dott > li");
 		var team3 = document.querySelector("#content > .list > .team .team3");
 		var team3Lis = document.querySelectorAll("#content > .list > .team .team3 li");
+
+		var mask = document.querySelector("#mask");
+		var curtain = document.querySelectorAll("#mask div");
+		var line = document.querySelector("#mask .line");
 		/*同步content li 的索引*/
 		var now = 0;
         var timer = 0;
 
 		/*content 区域*/
+		
+		//开机动画
+		loadingAn();
+		function loadingAn(){
+			//var swidth = document.documentElement.clientWidth;
+			var arr = ['b1.jpg','b2.jpg','b3.jpg','b1.jpg','b2.jpg'];//模拟加载产生进度条效果
+			var flag = 0;
+//			for(var i=0;i<12;i++){
+//				arr[i] = swidth/12*(i+1);
+//			}
+			for(var j=0;j<arr.length;j++){
+				var img = new Image();
+				img.src = "img/"+arr[j];
+				img.onload = function(){
+					flag++;
+					line.style.width = flag/arr.length*100+"%";
+				}
+			}
+			line.addEventListener("transitionend",function(){
+				if(flag === arr.length){
+					for(var i=0;i<curtain.length;i++){
+						curtain[i].style.height = 0+"px";
+					}
+					this.style.display="none";
+				}
+			})
+			
+			curtain[0].addEventListener("transitionend",function(){
+				mask.remove();
+				home3d();
+			})
+		}
+
 		//出入场动画
 		var anArr = [{
 						inAn:function(){
@@ -248,7 +285,7 @@ window.onload = function(){
 		var oldIndex = 0;
 		var timer3D = null;
 		var autoIndex = 0;
-		home3d();
+		//home3d(); 开机动画结束后调用
         function home3d(){
 			for (var i=0;i<home2LiNodes.length ;i++ )
 			{   

@@ -1,6 +1,7 @@
 /* css reset*/
 html,body{height:100%;overflow:hidden;}
 html,body,h1,h2,h3,h4,h5,h6,p,ul,li{margin:0;padding:0;font:14px "微软雅黑";}
+#wrap{height:100%}
 a{text-decoration:none;display:block;}
 li{list-style:none;}
 img{display:block;}
@@ -167,4 +168,22 @@ position:absolute;left:0;top:0;width:100%;height:100%;box-sizing:border-box;padd
 /*出入场动画*/
 #content > .list > .team .team1,#content > .list > .team .team2,#content > .list > .about .about3 > .item:nth-child(1),#content > .list > .about .about3 > .item:nth-child(2)
 {transition:2s transform;}
+
+/*开机动画*/
+#mask{height:100%;width:100%;position:absolute;z-index:100;}
+#mask .up {width:100%;height:50%;background:deepskyblue;transition:1s height;}
+#mask .down{width:100%;height:50%;background:deepskyblue;transition:1s height;position:absolute;bottom:0;}
+#mask .line{width:0;height:4px;background:white;position:absolute;left:0;top:50%;margin-top:-2px;z-index:101;
+            transition:1s width;}
+
+
+
+
+
+
+
+
+
+
+
 
